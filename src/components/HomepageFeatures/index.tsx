@@ -4,48 +4,54 @@ import styles from './styles.module.css';
 
 type FeatureItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+  Image: React.ComponentType<React.ComponentProps<'img'>>;
   description: JSX.Element;
 };
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Combat Phishing with Confidence',
+    Image: require('@site/static/img/phishingbattle.png').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Craft custom phishing campaigns that mirror real-world attacks. Train your staff to spot the signs and avoid costly security breaches.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Knowledge is Power',
+    Image: require('@site/static/img/learningship.png').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Our software doesn't just test - it educates. Provide targeted training resources that explain phishing tactics and promote safe online behavior.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'The Power of Open Source',
+    Image: require('@site/static/img/opensourceship.png').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Security You Can See. Inspect, modify, and contribute to our code, ensuring full transparency and building trust.
       </>
     ),
   },
+  // {
+  //   title: 'The Power of Open Source',
+  //   Image: require('@site/static/img/phishingbattle.png').default,
+  //   description: (
+  //     <>
+  //       Join a global network of experts dedicated to fighting phishing. Access a continually evolving toolset powered by collaboration and innovation.
+  //     </>
+  //   ),
+  // },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({title, Image, description}: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        <img src={Image} className={styles.featureSvg} />
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>

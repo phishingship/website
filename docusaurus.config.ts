@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'PhishingShip',
   tagline: 'Opensource Phishing Simulation and Training',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/phishingship.svg',
 
   // Set the production url of your site here
   url: 'https://phishingship.app',
@@ -63,10 +63,10 @@ const config: Config = {
       title: 'PhishingShip',
       logo: {
         alt: 'PhishingShip Logo',
-        src: 'img/logo.png',
+        src: 'img/phishingship.svg',
       },
       items: [
-        {to: '/getting-started', label: 'Getting Started', position: 'left'},
+        {to: '/docs/getting-started', label: 'Getting Started', position: 'left'},
         {
           type: 'docSidebar',
           sidebarId: 'documentationSidebar',
@@ -110,11 +110,7 @@ const config: Config = {
             {
               label: 'Blog',
               to: '/blog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
-            },
+            }
           ],
         },
       ],
